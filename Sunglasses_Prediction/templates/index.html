@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Face</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CssFile/style.css') }}">
+
+</head>
+<body>
+  
+    <h1>Sunglasses Detection</h1>
+    <video id="video" autoplay></video>
+    <button id="capture">Capture</button>
+    <canvas id="canvas" style="display: none;"></canvas>
+    <script src="{{ url_for('static', filename='Javascript/script.js') }}"></script>
+    <h2 id="result">
+    </h2>
+</body>
+</html>

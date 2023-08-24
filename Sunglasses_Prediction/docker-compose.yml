@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  service1:
+    container_name: service1
+    build:
+      context: ./Service1
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5000"
+
+
+  main-site:
+    container_name: main-site
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    depends_on:
+      - service1
+
